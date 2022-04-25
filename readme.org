@@ -12,7 +12,7 @@ have more time to improve performance, write test code, and provide support to
 developers.
 
 The goal of the game is to be a combination of dwarf fortress and roblox. To
-truly define what the metaverse is. To be the backbone of internet real-estate.
+ethically define what the metaverse is. To be the backbone of internet real-estate.
 
 * Release Plan
 
