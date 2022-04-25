@@ -1,0 +1,25 @@
+#+title: Boundaries - Models and Interfaces
+#+author: Samuel Jahnke
+
+This library houses shared code that is run on both on the server and on any
+client for http://boundaries.cloud simulation game.
+
+The benefits of open source are obvious but specifically we want to give people
+the opportunity to produce and customize their own clients. If you love
+something, set it free, and we just want as much interest into the game as
+possible. By giving away control of the clients, the backend developers will
+have more time to improve performance, write test code, and provide support to
+developers.
+
+The goal of the game is to be a combination of dwarf fortress and roblox. To
+truly define what the metaverse is. To be the backbone of internet real-estate.
+
+* Release Plan
+
+** DONE separate and release shared code library
+
+<2022-04-25 Mon>
+
+** TODO develop open source cli client for testing and botting
+
+** TODO release server standalone for community hosting
