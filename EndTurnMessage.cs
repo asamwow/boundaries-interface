@@ -31,8 +31,11 @@ namespace boundaries.Models {
 
       public bool processing;
 
-      public EndTurnMessage(bool processing) : base(0, 0) {
+      public bool requested;
+
+      public EndTurnMessage(bool processing, bool requested = false) : base(0, 0) {
          this.processing = processing;
+         this.requested = requested;
          messageType = 14;
       }
 
@@ -41,6 +44,11 @@ namespace boundaries.Models {
             processing = false;
          } else {
             processing = true;
+         }
+         if (Convert.ToInt32(hex.Substring(19, 1), 2) == 0) {
+            requested = false;
+         } else {
+            requested = true;
          }
       }
 
@@ -51,6 +59,12 @@ namespace boundaries.Models {
             boolByte = 1;
          }
          string digit = boolByte.ToString("X2");
+         stream.WriteByte((byte)digit[1]);
+         boolByte = 0;
+         if (requested) {
+            boolByte = 1;
+         }
+         digit = boolByte.ToString("X2");
          stream.WriteByte((byte)digit[1]);
       }
    }
